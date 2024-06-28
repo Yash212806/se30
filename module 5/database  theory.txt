@@ -1,0 +1,73 @@
+database : 
+
+A database is an organized collection of data stored electronically in a computer system. It is designed to manage, retrieve, and update information efficiently. Databases are structured to allow easy access to, and manipulation of, data, ensuring that the information is stored in a way that supports data integrity, consistency, and security. They can range from simple files to complex systems supporting multiple users and large volumes of data, and they are essential for applications in various fields like finance, healthcare, education, and more.
+
+Normalization: 
+
+Normalization is a database design process that organizes data to reduce redundancy and improve integrity. It involves dividing a database into smaller tables and defining relationships between them. The primary goals are to eliminate duplicate data and ensure logical data dependencies. Key normal forms include:
+
+1. *\ Normal Form (1NF)*: Ensures each column contains only atomic values.
+2. *Second Normal Form (2NF)*: Ensures full dependency on the primary key.
+3. *Third Normal Form (3NF)*: Ensures no transitive dependencies.
+4. *Boyce-Codd Normal Form (BCNF)*: Every determinant is a candidate key.
+
+DBMS AND RDBMS:
+
+- *DBMS (Database Management System)*: Software for managing databases, allowing data storage, retrieval, and management without enforcing relationships between tables. Examples include Microsoft Access and MongoDB.
+
+- *RDBMS (Relational Database Management System)*: A type of DBMS that uses tables with defined relationships, ensuring data integrity and supporting SQL. Examples include MySQL, PostgreSQL, and Oracle Database.
+
+DATA REDUNDANCY : 
+
+Data redundancy occurs when the same piece of data is stored in multiple places within a database. This leads to unnecessary duplication, increased storage requirements, and potential inconsistencies in the data.
+
+DDL interpreter : 
+
+A DDL (Data Definition Language) interpreter processes SQL commands that define the structure of a database, such as CREATE, ALTER, and DROP statements. It interprets these commands to create or modify database schema elements like tables, indexes, and relationships.
+
+DML COMPILER :
+
+A DML (Data Manipulation Language) compiler translates SQL commands for data manipulation, such as SELECT, INSERT, UPDATE, and DELETE, into low-level instructions that the database management system can execute.
+
+
+SQL key constraints :
+
+SQL key constraints ensure data integrity by defining rules for the values that can be stored in columns. Examples include:
+
+Primary Key Constraint: Ensures uniqueness of values in a column.
+
+
+CREATE TABLE Students (
+    StudentID INT PRIMARY KEY,
+    Name VARCHAR(100),
+    Age INT
+);
+
+Foreign Key Constraint: Establishes a relationship between tables.
+
+CREATE TABLE Orders (
+    OrderID INT PRIMARY KEY,
+    CustomerID INT,
+    OrderDate DATE,
+    FOREIGN KEY (CustomerID) REFERENCES Customers(CustomerID)
+);
+
+Unique Constraint: Ensures values in a column are unique.
+
+CREATE TABLE Employees (
+    EmployeeID INT PRIMARY KEY,
+    SSN VARCHAR(20) UNIQUE,
+    Name VARCHAR(100),
+    DepartmentID INT
+);
+
+Check Constraint: Validates values against a condition.
+
+CREATE TABLE Products (
+    ProductID INT PRIMARY KEY,
+    ProductName VARCHAR(100),
+    Price DECIMAL(10, 2),
+    Quantity INT,
+    CHECK (Price > 0 AND Quantity >= 0)
+);
+These constraints help maintain data consistency and accuracy within the database.
