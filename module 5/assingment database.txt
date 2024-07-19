@@ -2,7 +2,7 @@ Create table student(
 Id int  PRIMARY KEY AUTO_INCREMENT NOT NULL,
 Rollno bigint unique key,
 Name varchar(20),
-Branch varchar(20),
+Branch varchar(20)
 );
 
 
@@ -14,7 +14,7 @@ INSERT into student (Rollno,Name,Branch)VALUES
 
 Create table exam(
 Rollno bigint ,
-Foregien key(Rollno)refrences student(Rollno),
+FOREIGN key(Rollno) references student(Rollno),
 S_code varchar(20),
 marks Bigint,
 P_code varchar(20)
@@ -103,7 +103,7 @@ FROM employee
 GROUP BY Department 
 ORDER BY Max_Salary ASC;
 
-SELECT e.First_name, i.Incentive_amount 
+SELECT e.Firstname, i.Incentive_amount 
 FROM Employee e 
 JOIN Incentive i ON e.Employee_id = i.Employee_ref_id 
 WHERE i.Incentive_amount > 3000;
