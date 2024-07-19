@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=>, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        ul li:first-child{
+            background-color: chocolate;
+        }
+
+        ul li:last-child{
+            background-color: crimson;
+        }
+
+        ul li:nth-child(2){
+            background-color: bisque;
+        } 
+
+        ul li:nth-child(even){
+            background-color: blueviolet;
+        }
+
+        ul li::first-letter{
+
+            background-color: cadetblue;
+        }
+
+        ul li::first-line{
+            background-color: aqua;
+        }
+
+        div{
+            height: 300px;
+            width: 200px;
+            border: 2px solid;
+            transition: 1s;
+        }
+
+        div:hover{
+
+            background-color: lightcoral;
+        }
+
+ 
+        p::selection{
+            background-color: red;
+        }
+        
+
+        
+    </style>
+
+    
+</head>
+<body>
+    <ul stytle="list-style-type:square;">
+        <li>one</li>
+        <li>one</li>
+        <li>one</li>
+        <li>one</li>
+        <li>one</li>
+        <li>one</li>
+        <li>one</li>
+        <li>one</li>
+
+        <div>
+
+            </div>
+
+            <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fuga architecto mollitia similique, porro, eos molestiae nostrum debitis at quod soluta recusandae consequatur sit necessitatibus magni, dolores voluptatibus assumenda voluptas dolore.
+            </p>
+    </ul>
+</body>
+</html>
