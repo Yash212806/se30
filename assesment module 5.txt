@@ -1,0 +1,26 @@
+
+create database BANK;
+
+create table bank1(
+    branch_id bigint,
+    branch_name varchar(20),
+    branch_city varchar(20));
+
+create table loan(
+    loan_no bigint,
+    branch_id bigint,
+    Account_holder_id varchar(20),
+    loan_amount bigint,
+    loan_type varchar(20));
+
+create table account(
+    account_holders_id bigint,
+    account_no bigint,
+    holders_name varchar(20),
+    city varchar(20),
+    contact bigint,
+    account_creation_date int,
+    account_status varchar(20),
+    account_type varchar(20),
+    balance bigint);
+    
